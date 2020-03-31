@@ -1,0 +1,22 @@
+{
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "sass": "^1.26.2"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^2.1.0",
+    "load-grunt-tasks": "^4.0.0",
+    "coffee-script": "^1.6.3"
+  }
+}

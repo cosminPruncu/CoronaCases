@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../_ui-src/js/index.js"],"names":[],"mappings":"AAAA,EAAE,QAAQ,EAAE,KAAK,CAAC,QAAQ,GAAG,CAAC;AAC9B,IAAI,OAAO,CAAC,GAAG,EAAE,MAAM,GAAG,CAAC;AAC3B","file":"main.js","sourcesContent":["$(document).ready(function(){\r\n    console.log(\"jquery\");\r\n});"]}
