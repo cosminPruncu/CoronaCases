@@ -10,8 +10,39 @@
 </head>
 <body>
     <div class="container">
-        <h1>Hello World</h1>
-        <button class="btn btn-info">Click me!</button>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Search for COVID-19 cases</h5>
+                        <!-- <div class="input-group mb-3">
+                            <input type="text" class="form-control search-country" placeholder="Country name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary search-button" type="button">Search</button>
+                            </div>  
+                        </div> -->
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="countryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Choose country
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="countryDropdown">
+                                <!-- Here are the countries -->
+                            </div>
+                          </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item country">Country</li>
+                            <li class="list-group-item confirmed">Confirmed</li>
+                            <li class="list-group-item recovered">Recovered</li>
+                            <li class="list-group-item critical">Critical</li>
+                            <li class="list-group-item deaths">Deaths</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                Ceva
+            </div>
+        </div>
     </div>
 </body>
 <script type="text/javascript" src="../_ui/js/vendor.js"></script>
