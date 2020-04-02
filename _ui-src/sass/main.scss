@@ -2,3 +2,16 @@
     max-height: 400px;
     overflow-y: auto;
 }
+
+.carousel-inner img{
+    width: auto;
+    height: 400px;
+    max-height: 400px;
+}
+
+body {
+    background-image: url("../../_ui/images/corona-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
