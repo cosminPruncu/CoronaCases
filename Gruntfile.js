@@ -16,10 +16,11 @@ module.exports = function (grunt){
                         '_ui-src/js/index.js'
                     ],
                     '_ui/js/vendor.js' : [
-                        // JQUERY AND BOOTSTRAP HERE
+                        // JQUERY, BOOTSTRAP, POPPER.JS AND JQUERY-UI HERE
                         'node_modules/jquery/dist/jquery.min.js',
                         'node_modules/popper.js/dist/umd/popper.min.js',
-                        'node_modules/bootstrap/dist/js/bootstrap.min.js'
+                        'node_modules/bootstrap/dist/js/bootstrap.min.js',
+                        'node_modules/jquery-ui-dist/jquery-ui.min.js'
                         
                     ]
                 }
@@ -32,8 +33,8 @@ module.exports = function (grunt){
             },
             dist : {
                 files : {
-                    '_ui/css/main.css' : '_ui-src/sass/main.scss',
-                    '_ui/css/vendor.css' : '_ui-src/sass/vendor.scss'
+                    '_ui/css/main.css' : '_ui-src/sass/theme/main.scss',
+                    '_ui/css/vendor.css' : '_ui-src/sass/theme/vendor.scss'
                 }
             }
         },

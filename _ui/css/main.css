@@ -1,16 +1,20 @@
-.dropdown-menu {
-  max-height: 400px;
-  overflow-y: auto; }
+body {
+  background-image: url("../../_ui/images/corona-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
 
 .carousel-inner img {
   width: auto;
   height: 400px;
   max-height: 400px; }
 
-body {
-  background-image: url("../../_ui/images/corona-background.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
+.dropdown-menu {
+  max-height: 400px;
+  overflow-y: auto; }
+
+.ui-menu {
+  max-height: 400px;
+  overflow-y: auto; }
 
 /*# sourceMappingURL=main.css.map */
