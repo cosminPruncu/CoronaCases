@@ -13,7 +13,13 @@ module.exports = function (grunt){
                 files: {
                     '_ui/js/main.js': [
                         // JS FILES HERE
-                        '_ui-src/js/index.js'
+                        '_ui-src/js/input-country-list.js',
+                        '_ui-src/js/dropdown-country-list.js',
+                        '_ui-src/js/remove-children.js',
+                        '_ui-src/js/animate-values.js',
+                        '_ui-src/js/country-list.js'
+
+                        
                     ],
                     '_ui/js/vendor.js' : [
                         // JQUERY, BOOTSTRAP, POPPER.JS AND JQUERY-UI HERE
