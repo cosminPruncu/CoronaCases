@@ -7,6 +7,7 @@ COVID.remove = {
         $(".recovered").children().remove();
         $(".critical").children().remove();
         $(".deaths").children().remove();
+        $(".remaining").children().remove();
     },
 }
 

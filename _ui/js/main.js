@@ -27,6 +27,7 @@ COVID.input = {
                     if (results == '' || results == undefined) {
                         $('.invalid-feedback').addClass('d-flex');
                     } else {
+                        var remainingCases = results.confirmed - results.recovered - results.deaths;
                         COVID.remove.removeChildren();
                         $('.invalid-feedback').removeClass('d-flex');
 
@@ -35,6 +36,8 @@ COVID.input = {
                         $(".recovered").append(` <b class="increment">${results.recovered}</b>`);
                         $(".critical").append(` <b class="increment">${results.critical}</b>`);
                         $(".deaths").append(` <b class="text-danger increment">${results.deaths}</b>`);
+                        $(".remaining").append(` <b class="text-remaining increment">${remainingCases}</b>`);
+
                         COVID.animate.animateValues();
                     }
 
@@ -66,6 +69,7 @@ COVID.input = {
                         if (results == '' || results == undefined) {
                             $('.invalid-feedback').addClass('d-flex');
                         } else {
+                            var remainingCases = results.confirmed - results.recovered - results.deaths;
                             COVID.remove.removeChildren();
                             $('.invalid-feedback').removeClass('d-flex');
 
@@ -74,6 +78,8 @@ COVID.input = {
                             $(".recovered").append(` <b class="increment">${results.recovered}</b>`);
                             $(".critical").append(` <b class="increment">${results.critical}</b>`);
                             $(".deaths").append(` <b class="text-danger increment">${results.deaths}</b>`);
+                            $(".remaining").append(` <b class="text-remaining increment">${remainingCases}</b>`);
+
                             COVID.animate.animateValues();
                         }
 
@@ -98,7 +104,6 @@ $(document).ready(function () {
 ;var COVID = COVID ? COVID : {};
 
 COVID.dropdown = {
-    
     dropdownCountryList: function () {
         $.each(COVID.countries.country_list, function (key) {
             $(".dropdown-menu").append(`<button class="dropdown-item search-country-name">${COVID.countries.country_list[key]}</button>`);
@@ -123,6 +128,7 @@ COVID.dropdown = {
                     if (results == '' || results == undefined) {
                         $('.invalid-feedback').addClass('d-flex');
                     } else {
+                        var remainingCases = results.confirmed - results.recovered - results.deaths;
                         COVID.remove.removeChildren();
                         $('.invalid-feedback').removeClass('d-flex');
 
@@ -131,6 +137,7 @@ COVID.dropdown = {
                         $(".recovered").append(` <b class="increment">${results.recovered}</b>`);
                         $(".critical").append(` <b class="increment">${results.critical}</b>`);
                         $(".deaths").append(` <b class="text-danger increment">${results.deaths}</b>`);
+                        $(".remaining").append(` <b class="text-remaining increment">${remainingCases}</b>`);
                         COVID.animate.animateValues();
                     }
 
@@ -157,6 +164,7 @@ COVID.remove = {
         $(".recovered").children().remove();
         $(".critical").children().remove();
         $(".deaths").children().remove();
+        $(".remaining").children().remove();
     },
 }
 
