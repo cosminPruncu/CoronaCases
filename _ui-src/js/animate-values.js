@@ -12,9 +12,23 @@ COVID.animate = {
                 }
             });
         });
+    },
+
+    animateTotalValues: function () {
+        $(".increment-totals").each(function () {
+            var $currentElement = $(this);
+            $({ counter: 100000 }).animate({ counter: $currentElement.text() }, {
+                duration: 2000,
+                easing: 'swing',
+                step: function () {
+                    $currentElement.text(Math.ceil(this.counter));
+                }
+            });
+        });
     }
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
     COVID.animate.animateValues();
+    COVID.animate.animateTotalValues();
 });

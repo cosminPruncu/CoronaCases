@@ -184,11 +184,25 @@ COVID.animate = {
                 }
             });
         });
+    },
+
+    animateTotalValues: function () {
+        $(".increment-totals").each(function () {
+            var $currentElement = $(this);
+            $({ counter: 100000 }).animate({ counter: $currentElement.text() }, {
+                duration: 2000,
+                easing: 'swing',
+                step: function () {
+                    $currentElement.text(Math.ceil(this.counter));
+                }
+            });
+        });
     }
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
     COVID.animate.animateValues();
+    COVID.animate.animateTotalValues();
 });;var COVID = COVID ? COVID : {};
 
 COVID.countries = {
@@ -218,5 +232,38 @@ COVID.countries = {
         , "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"]
 }
 
+;var COVID = COVID ? COVID : {};
 
+COVID.totals = {
+    displayTotalStats: function () {
+        $.ajax({
+            "async": true,
+            "crossDomain": true,
+            "url": "https://covid-19-data.p.rapidapi.com/totals?format=undefined",
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "covid-19-data.p.rapidapi.com",
+                "x-rapidapi-key": "535c1d3527msh148cb4ef6ceb123p1eab9djsnf2f84d2bb4b7"
+            },
+            success : function(data){
+                var totals = data[0];
+                var totalActive = totals.confirmed - totals.recovered - totals.deaths;
+                $(".total-confirmed").text(totals.confirmed);
+                $(".total-recovered").text(totals.recovered);
+                $(".total-critical").text(totals.critical);
+                $(".total-deaths").text(totals.deaths);
+                $(".total-active").text(totalActive);
+
+                COVID.animate.animateTotalValues();
+            },
+            error : function(data){
+                console.log(data);
+            }
+        });
+    }
+}
+
+$(document).ready(function () {
+    COVID.totals.displayTotalStats();
+});
 //# sourceMappingURL=main.js.map
