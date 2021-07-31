@@ -1,8 +1,10 @@
 body {
   background-image: url("../../_ui/images/corona-background.jpg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
+  background-position: center; }
+  @media screen and (max-width: 600px) {
+    body {
+      background-size: cover; } }
 
 .dropdown-menu {
   max-height: 400px;
