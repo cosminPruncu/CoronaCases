@@ -3,7 +3,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: $sm-screen) {
         background-size: cover;
     }
 }

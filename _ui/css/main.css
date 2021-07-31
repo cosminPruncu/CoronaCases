@@ -2,7 +2,7 @@ body {
   background-image: url("../../_ui/images/corona-background.jpg");
   background-repeat: no-repeat;
   background-position: center; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 540px) {
     body {
       background-size: cover; } }
 
@@ -1641,6 +1641,6 @@ a.ui-button:active,
   box-shadow: 0px 0px 5px #666666; }
 
 .text-remaining {
-  color: darkorange; }
+  color: #ff8c00; }
 
 /*# sourceMappingURL=main.css.map */
